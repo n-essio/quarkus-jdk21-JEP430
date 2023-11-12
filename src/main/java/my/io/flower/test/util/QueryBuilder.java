@@ -1,4 +1,4 @@
-package my.groupId;
+package my.io.flower.test.util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

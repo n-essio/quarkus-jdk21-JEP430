@@ -1,19 +1,16 @@
-package my.groupId;
+package my.io.flower.test.service.rs;
 
-import io.quarkus.logging.Log;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
+import my.io.flower.test.model.pojo.User;
+import my.io.flower.test.util.QueryBuilder;
 
 import javax.sql.DataSource;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
-import static java.lang.StringTemplate.RAW;
 import static java.util.FormatProcessor.FMT;
 
 @Path("/hello")

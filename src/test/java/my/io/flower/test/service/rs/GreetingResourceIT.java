@@ -1,4 +1,4 @@
-package my.groupId;
+package my.io.flower.test.service.rs;
 
 import io.quarkus.test.junit.QuarkusIntegrationTest;
 
