@@ -25,10 +25,12 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String hello() {
+        var user = new User("fiorenzo", "pizza");
         var world = "flower";
         var age = 48;
         return STR. """
             Hello \{ world }! an older \{ age } man!
+            \{ user.name() }  \{ user.surname() }
         """ ;
     }
 
@@ -37,7 +39,7 @@ public class GreetingResource {
     @Produces(MediaType.TEXT_HTML)
     public String sql() {
         var i = 0;
-        String s = FMT. "The answer is %5d\{ i }";
+        String s = FMT. "The answer is %5d\{ i }" ;
         System.out.println(s);
         StringBuffer stringBuffer = new StringBuffer();
         try (var conn = dataSource.getConnection()) {
